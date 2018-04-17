@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import data_loader
 
 def main():
@@ -44,6 +45,11 @@ def main():
     # 50%    13692.115000  14639.075000        0.000000     4.490000
     # 75%    17390.917500  17744.642500      101.130000    72.090000
     # max    24124.150000  26616.710000     1343.430000   936.420000
+
+    index_data['NIKKEI225_ratio'] = index_data
+    print(index_data.corr())
+    print(index_data.std())
+    print(index_data.mean())
 
 if __name__ == '__main__':
     main()
